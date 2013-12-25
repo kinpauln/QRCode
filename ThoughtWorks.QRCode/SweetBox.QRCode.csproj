@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{99FACF1D-E6BB-4BB1-8199-C45FDCC67CEB}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>SweetBox.QRCode</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>SweetBox.QRCode</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="SweetBox\QRCode\ExceptionHandler\SymbolNotFoundException.cs" />
+    <Compile Include="SweetBox\QRCode\Codec\Ecc\BCH15_5.cs" />
+    <Compile Include="SweetBox\QRCode\Codec\Util\SystemUtils.cs" />
+    <Compile Include="SweetBox\QRCode\Codec\QRCodeEncoder.cs" />
+    <Compile Include="SweetBox\QRCode\ExceptionHandler\FinderPatternNotFoundException.cs" />
+    <Compile Include="SweetBox\QRCode\Codec\Data\QRCodeSymbol.cs" />
+    <Compile Include="SweetBox\QRCode\Codec\Data\QRCodeImage.cs" />
+    <Compile Include="SweetBox\QRCode\Codec\Data\QRCodeBitmapImage.cs" />
+    <Compile Include="SweetBox\QRCode\Codec\Util\ContentConverter.cs" />
+    <Compile Include="SweetBox\QRCode\Codec\Reader\Pattern\AlignmentPattern.cs" />
+    <Compile Include="SweetBox\QRCode\Geom\Line.cs" />
+    <Compile Include="SweetBox\QRCode\Codec\Util\DebugCanvas.cs" />
+    <Compile Include="SweetBox\QRCode\Codec\Util\DebugCanvasAdapter.cs" />
+    <Compile Include="SweetBox\QRCode\Codec\Reader\QRCodeDataBlockReader.cs" />
+    <Compile Include="SweetBox\QRCode\ExceptionHandler\VersionInformationException.cs" />
+    <Compile Include="SweetBox\QRCode\Codec\Util\ConsoleCanvas.cs" />
+    <Compile Include="SweetBox\QRCode\ExceptionHandler\InvalidDataBlockException.cs" />
+    <Compile Include="SweetBox\QRCode\Codec\Ecc\ReedSolomon.cs" />
+    <Compile Include="SweetBox\QRCode\Properties\Resources.cs" />
+    <Compile Include="SweetBox\QRCode\ExceptionHandler\InvalidVersionInfoException.cs" />
+    <Compile Include="SweetBox\QRCode\Codec\Reader\Pattern\LogicalSeed.cs" />
+    <Compile Include="SweetBox\QRCode\Codec\QRCodeDecoder.cs" />
+    <Compile Include="SweetBox\QRCode\Codec\Reader\QRCodeImageReader.cs" />
+    <Compile Include="SweetBox\QRCode\Geom\Axis.cs" />
+    <Compile Include="SweetBox\QRCode\Codec\Reader\Pattern\FinderPattern.cs" />
+    <Compile Include="SweetBox\QRCode\ExceptionHandler\AlignmentPatternNotFoundException.cs" />
+    <Compile Include="SweetBox\QRCode\Codec\Util\Color_Fields.cs" />
+    <Compile Include="SweetBox\QRCode\Codec\Util\Color.cs" />
+    <Compile Include="SweetBox\QRCode\Codec\Util\QRCodeUtility.cs" />
+    <Compile Include="SweetBox\QRCode\Geom\SamplingGrid.cs" />
+    <Compile Include="SweetBox\QRCode\Geom\Point.cs" />
+    <Compile Include="SweetBox\QRCode\ExceptionHandler\InvalidVersionException.cs" />
+    <Compile Include="SweetBox\QRCode\ExceptionHandler\DecodingFailedException.cs" />
+    <EmbeddedResource Include="ThoughtWorks.QRCode.Properties.Resources.resources" />
+  </ItemGroup>
+</Project>
